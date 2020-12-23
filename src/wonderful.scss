@@ -1,0 +1,149 @@
+@import './components/global.scss';
+
+body {
+    font-family: $font;
+    background: $bodybg;
+    ul {
+        margin-left: 20px;
+    }
+}
+
+.global-wrapper {
+    background: $nude;
+    overflow: hidden;
+}
+
+h1.main-heading {
+    position: relative;
+    z-index: 1;
+    display: block;
+    &:hover {
+    }
+}
+
+.small-text {
+    font-size: 0.85em;
+    margin: 0 0 15px 0;
+    font-variant-caps: all-small-caps;
+    letter-spacing: .5px;
+}
+
+// Listed blog post
+
+.post-list-item {
+    z-index: 1;
+    position: relative;
+    padding: 1.5rem;
+    @include ease(transition($ease));
+    h2 {
+        padding-top: 1rem;
+        a {
+            background: linear-gradient(to right, #fc5c7d, #6a82fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    &:hover {
+        color: $burnt;
+        h2 {
+            color: $burnt;
+        }
+        a {
+            color: $burnt;
+        }
+        .small-text {
+            color: $burnt;
+        }
+        .misterReader {
+            .icon {
+                bottom: -5px;
+            }
+        }
+    }
+    .misterReader {
+        position: relative;
+        width: 70px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: 50%;
+        .grayHole {
+            z-index: -1;
+            position: absolute;
+            bottom: 0;
+            width: 92%;
+            height: 69%;
+            background-color: #ccc;
+            border-radius: 50%;
+        }
+        .blackHole {
+            z-index: 0;
+            position: absolute;
+            bottom: 0;
+            margin: auto;
+            width: 87%;
+            height: 55%;
+            background-color: #333;
+            border-radius: 50%;
+        }
+        .icon {
+            z-index: 0;
+            position: absolute;
+            bottom: -25px;
+            height: 50px;
+            width: 50px;
+            background-image: url("../content/assets/reading-icon.png");
+            background-size: cover;
+            transition: 0.3s ease all;
+        }
+        &:hover,
+        &:focus {
+            .icon {
+                bottom: -5px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.post-list-item header {
+    display: grid;
+    grid-template-columns: 100px 2fr;
+}
+
+
+button {
+    @include ease(transition($ease));
+}
+
+.blogPostBtn {
+    padding: 1rem 2rem;
+    background-color: $burnt;
+    border: 3px solid darken($burnt, 10%);
+    color: #fff;
+    font-weight: bold;
+    &:hover {
+        background-color: darken($nude, 10%);
+        cursor: pointer;
+        box-shadow: 8px -8px 0px darken($burnt, 10%);
+        border-color: $nude;
+        color: $burnt;
+    }
+}
+
+// FOOTER
+
+footer {
+    text-align: center;
+    .attribution {
+        font-size: 0.8em;
+    }
+}
+
+// General styles
+
+code {
+    display: inline-block;
+    padding: .1rem .5rem;
+}

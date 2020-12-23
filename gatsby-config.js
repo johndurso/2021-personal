@@ -1,16 +1,17 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `johndurso.co`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `John Durso`,
+      summary: `Web designer and developer in Detroit, Michigan!`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `A blog with tips about web stuff and my journey as a developer.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `johndursodev`,
     },
   },
+  pathPrefix: `/blog`,
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -49,6 +50,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-sass`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -60,8 +62,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `John's blog`,
+        short_name: `johndurso`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
@@ -73,5 +75,6 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    `gatsby-plugin-dark-mode`,
   ],
 }

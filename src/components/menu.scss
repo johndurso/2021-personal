@@ -1,0 +1,204 @@
+@import '/global.scss';
+
+
+svg {
+  fill: $burnt;
+  &:hover {
+    opacity: 0.7;
+    @include ease(transition($ease));
+  }
+}
+
+.menu-toggle {
+  z-index: 500;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  padding: .75em;
+  margin: 5px;
+  line-height: 1em;
+  font-size: 1.5em;
+  color: $nude;
+  cursor: pointer;
+  background-color: $bodybg;
+  border-radius: 100px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  &:hover {
+    background-color: $nude;
+    border-color: $bodybg;
+    color: $burnt;
+  }
+}
+
+.menu-toggle:hover,
+#main-menu-checkbox:focus ~ .navigation .menu-toggle {
+  color: lighten($burnt, 15%);
+}
+
+#main-menu-checkbox {
+  position: fixed;
+  bottom: 0;
+  left: -100vw;
+}
+
+.main-menu {
+  position: fixed;
+  left: -100vw;
+  top: 0;
+  height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  transition: left 0.3s ease;
+  z-index: 999;
+  background: $nude;
+  ul {
+    list-style: none;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 2.5em 0;
+    overflow-y: none;
+    width: 100vw;
+    background: transparent;
+    display: block;
+    justify-content: center;
+    li {
+      a {
+        display: block;
+        margin: 5px 10px;
+        padding: 15px;
+        line-height: 1.5em;
+        font-size: 1.3em;
+        font-weight: bold;
+        color: $bodybg;
+        text-decoration: none;
+        &:hover,
+        &:focus {
+          color: lighten($bodybg, 15%);
+        }
+      }
+    }
+  }
+  .menu-close {
+    bottom: 0;
+    &:hover {
+      color: lighten($bodybg, 15%);
+    }
+  }
+}
+
+.main-menu .menu-close {
+  z-index: 1001;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 70px;
+  width: 70px;
+  line-height: 45px;
+  padding: 15px;
+  margin: 5px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 100%;
+  display: block;
+  font-size: 1.5em;
+  color: $tan;
+  background-color: $bodybg;
+  border-radius: 100px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  &:hover {
+    background-color: $nude;
+    border-color: $bodybg;
+    color: $burnt;
+  }
+}
+
+#main-menu-checkbox:checked ~ .navigation .main-menu,
+.main-menu[aria-expanded="true"] {
+  left: 0;
+  outline: none;
+}
+
+#main-menu-checkbox:checked ~ .navigation .menu-close,
+.main-menu[aria-expanded="true"] .menu-close {
+  z-index: 1001;
+}
+
+#main-menu-checkbox:checked ~ .navigation .main-menu ul,
+.main-menu[aria-expanded="true"] ul {
+  position: relative;
+  z-index: 1000;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle,
+  .main-menu .menu-close,
+  #main-menu-checkbox {
+    display: none;
+  }
+  
+  .main-menu {
+    z-index: 100;
+    position: relative;
+    left: 0;
+    top: 0;
+    height: auto;
+    overflow-y: none;
+    overflow-x: none;
+    transition: left 0.3s ease;
+    z-index: 999;
+    background: transparent;
+    ul {
+      list-style: none;
+      text-align: left;
+      margin: 0 auto;
+      max-width: 960px;
+      padding: 0;
+      width: 100%;
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      li {
+        margin: 0;
+        a {
+          display: block;
+          padding: 15px;
+          font-size: 1.3em;
+          margin: 0;
+          font-weight: bold;
+          color: $bodybg;
+          text-decoration: none;
+          &:hover {
+            background: none;
+            color: lighten($bodybg, 15%);
+          }
+        }
+      }
+    }
+    a {
+      display: block;
+      width: 100%;
+      margin: 5px 10px;
+      padding: 15px;
+      line-height: 1.5em;
+      font-size: 1.3em;
+      color: $burnt;
+      text-decoration: none;
+    }
+  }
+}
+
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}

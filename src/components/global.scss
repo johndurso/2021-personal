@@ -1,0 +1,23 @@
+// https://www.color-hex.com/color-palette/99744
+
+$lpurp  : #d9d4eb;
+$nude   : #fde9ea;
+$tan    : #f5d0ba;
+$burnt  : #ed695f;
+$bodybg  : #222222;
+
+$font: "Noto Sans", sans-serif;
+
+$ease   : 0.25s ease all;
+
+@mixin ease($property){
+  transition: $ease;
+  -webkit-transition: $ease;
+  -moz-transition: $ease;
+  -o-transition: $ease;
+}
+
+.language-text {
+    background-color: $burnt !important;
+    color: #000 !important;
+}

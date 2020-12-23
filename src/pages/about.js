@@ -1,13 +1,12 @@
 import React from 'react'
-
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-const IndexPage = () => (
+const AboutPage = () => (
   <Layout>
-    <SEO title="Home" keywords={[`web design`, `web developer`, `user experience`, `user interface`]} />
+    <SEO title="About" keywords={[`web designer`, `web developer`, `user experience`, `user interface`]} />
     
-    <div className="grid-container homePage">
+    <div className="grid-container aboutPage">
       <div>
         <h2>Experienced web design and development</h2>
         <p>I'm a designer and developer who focuses on building high quality, fully optimized, responsive websites for any business, 
@@ -43,7 +42,8 @@ const IndexPage = () => (
           </li>
           <li><span>SSL Authentication</span>
             <ul>
-              <li>Enabling security compatibility with all browsers.</li>
+              <li>Enabling security compatibility with all browsers.<br />
+              <sup><strong style={{ color: `#FF7D7D`, fontSize: `10px`, }}>*Required for Google Chrome, Mozilla Firefox, and Safari beginning in 2019.</strong></sup></li>
             </ul>
           </li>
         </ul>
@@ -52,5 +52,4 @@ const IndexPage = () => (
   </Layout>
 )
 
-export default IndexPage
-
+export default AboutPage
