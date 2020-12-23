@@ -6,19 +6,20 @@ const AboutPage = () => (
   <Layout>
     <SEO title="About" keywords={[`web designer`, `web developer`, `user experience`, `user interface`]} />
     
-    <div className="grid-container aboutPage">
+    <div className="aboutPage">
+        <div className="johnAvatar">
+            <img src="content/assets/woodworker-icon.png" alt="error"></img>
+        </div>
       <div>
-        <h2>Experienced web design and development</h2>
-        <p>I'm a designer and developer who focuses on building high quality, fully optimized, responsive websites for any business, 
-        individual, or non-profit.</p>
+        <h2>About John</h2>
+        <p>I am a web designer and front-end web developer with experience in building large-scale and small boutique websites and applications. I spent the early part of my career with two different small agencies managing Wordpress sites, running social media campaigns, and building websites using HTML5, CSS3, and Javascript. Today, I'm involved in multiple different teams across <a target="_blank" rel="noreferrer" href="https://www.thomsonreuters.com/en.html">Thomson Reuters</a> handling website migrations, influencing design direction, and even had the pleasure of being apart of the small team that built the <a a href="_blank" rel="noreferrer" href="https://www.thomsonreuters.com/en/resources/covid-19.html">Thomson Reuters COVID-19 Resource Center</a>.</p>
       </div>
       <div>
-        <p>Today, if your website isn't built to handle every single style, model, and size device, you're missing out on over half of all traffic on the web. 
-        A responsive website that loads quickly on all devices is a <strong>must</strong> in {new Date().getFullYear()}. You'll lose up to 40% of site visitors for 
-        every second of time they wait for your content to load (after 4 seconds). Don't miss out on potential customers!</p>
+        <h3>During my free time</h3>
+        <p></p>
       </div>
       <div>
-        <h2>Services</h2>
+        <h3>Services</h3>
         <ul>
           <li><span>Web Design/Development</span>
             <ul>
