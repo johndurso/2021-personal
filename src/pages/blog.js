@@ -37,7 +37,7 @@ const BlogIndex = ({ data, location }) => {
                 itemScope
                 itemType="http://schema.org/Article"
               >
-                <header>
+                <div className="postFormatting">
                   <div>
                     <div className="misterReader">
                       <div className="grayHole"></div>
@@ -59,7 +59,7 @@ const BlogIndex = ({ data, location }) => {
                       />
                     </section>
                   </div>
-                </header>
+                </div>
               </article>
               </Link>
             </li>

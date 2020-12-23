@@ -33,6 +33,7 @@
   --fontFamily-serif: "Times New Roman", serif;
   --font-body: var(--fontFamily-sans);
   --font-heading: var(--fontFamily-sans);
+  --fontWeight-light: 100;
   --fontWeight-normal: 400;
   --fontWeight-medium: 500;
   --fontWeight-semibold: 600;
@@ -128,13 +129,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: var(--fontWeight-bold);
+  font-weight: var(--fontWeight-light);
   color: var(--color-heading);
 }
 
 h1 {
-  font-weight: var(--fontWeight-black);
-  font-size: var(--fontSize-6);
+  font-size: var(--fontSize-5);
   color: var(--color-heading-black);
 }
 

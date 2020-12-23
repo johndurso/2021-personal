@@ -1,10 +1,16 @@
 // https://www.color-hex.com/color-palette/99744
 
-$lpurp  : #d9d4eb;
-$nude   : #fde9ea;
-$tan    : #f5d0ba;
-$burnt  : #ed695f;
-$bodybg  : #222222;
+//light mode
+$bglight  : #d9d4eb;
+$bodylight : #f5d0ba;
+$textlight : #2a3074;
+$linklight : #ed695f;
+
+//dark mode
+$bgdark : #1a1a2e;
+$bodydark : #0f3460;
+$textdark : #fff;
+$linkdark : #e94560;
 
 $font: "Noto Sans", sans-serif;
 
@@ -16,3 +22,9 @@ $ease   : 0.25s ease all;
   -moz-transition: $ease;
   -o-transition: $ease;
 }
+
+//btn styles
+$btnPrimary : #ed695f;
+$btnSecondary : #fff;
+$btnWarning : #fff;
+$btnInfo : #fff;

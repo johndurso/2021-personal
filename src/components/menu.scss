@@ -2,7 +2,7 @@
 
 
 svg {
-  fill: $burnt;
+  fill: $linklight;
   &:hover {
     opacity: 0.7;
     @include ease(transition($ease));
@@ -19,22 +19,22 @@ svg {
   margin: 5px;
   line-height: 1em;
   font-size: 1.5em;
-  color: $nude;
+  color: $linklight;
   cursor: pointer;
-  background-color: $bodybg;
+  background-color: #fff;
   border-radius: 100px;
   text-decoration: none;
   border: 2px solid transparent;
   &:hover {
-    background-color: $nude;
-    border-color: $bodybg;
-    color: $burnt;
+    background-color: $bodylight;
+    border-color: $linklight;
+    color: lighten($linklight, 10%);
   }
 }
 
 .menu-toggle:hover,
 #main-menu-checkbox:focus ~ .navigation .menu-toggle {
-  color: lighten($burnt, 15%);
+  color: lighten($linklight, 15%);
 }
 
 #main-menu-checkbox {
@@ -52,7 +52,7 @@ svg {
   overflow-x: hidden;
   transition: left 0.3s ease;
   z-index: 999;
-  background: $nude;
+  background: $bglight;
   ul {
     list-style: none;
     text-align: center;
@@ -72,19 +72,20 @@ svg {
         line-height: 1.5em;
         font-size: 1.3em;
         font-weight: bold;
-        color: $bodybg;
+        color: $linkdark;
         text-decoration: none;
         &:hover,
         &:focus {
-          color: lighten($bodybg, 15%);
+          color: lighten($linkdark, 15%);
         }
       }
     }
   }
   .menu-close {
     bottom: 0;
+    background-color: $bglight;
     &:hover {
-      color: lighten($bodybg, 15%);
+      color: lighten($bglight, 15%);
     }
   }
 }
@@ -104,15 +105,15 @@ svg {
   border-radius: 100%;
   display: block;
   font-size: 1.5em;
-  color: $tan;
-  background-color: $bodybg;
+  color: $linkdark;
+  background-color: #fff;
   border-radius: 100px;
   text-decoration: none;
   border: 2px solid transparent;
   &:hover {
-    background-color: $nude;
-    border-color: $bodybg;
-    color: $burnt;
+    background-color: $bodylight;
+    border-color: $linklight;
+    color: lighten($linklight, 10%);
   }
 }
 
@@ -169,11 +170,11 @@ svg {
           font-size: 1.3em;
           margin: 0;
           font-weight: bold;
-          color: $bodybg;
+          color: $linklight;
           text-decoration: none;
           &:hover {
             background: none;
-            color: lighten($bodybg, 15%);
+            color: lighten($linklight, 15%);
           }
         }
       }
@@ -185,7 +186,7 @@ svg {
       padding: 15px;
       line-height: 1.5em;
       font-size: 1.3em;
-      color: $burnt;
+      color: $linklight;
       text-decoration: none;
     }
   }

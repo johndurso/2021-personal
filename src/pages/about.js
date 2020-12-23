@@ -8,7 +8,6 @@ const AboutPage = () => (
     
     <div className="aboutPage">
         <div className="johnAvatar">
-            <img src="content/assets/woodworker-icon.png" alt="error"></img>
         </div>
       <div>
         <h2>About John</h2>
