@@ -55,7 +55,7 @@ const BlogIndex = ({ data, location }) => {
                         dangerouslySetInnerHTML={{
                           __html: post.frontmatter.description || post.excerpt,
                         }}
-                        itemProp="description"
+                        className="description"
                       />
                     </section>
                   </div>

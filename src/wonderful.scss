@@ -1,5 +1,29 @@
 @import './components/global.scss';
 
+//light & dark toggle
+
+.themeToggle {
+    position: fixed;
+    top: 0;
+    right: 100px;
+
+    input {
+        height: 0px;
+        width: 0px;
+        background-color: transparent;
+
+        &:before {
+            content:'';
+            height: 50px;
+            width: 50px;
+            display: block;
+        }
+    }
+    label {
+        visibility: hidden;
+    }
+}
+
 //light mode
 body {
     background: $bglight;
@@ -8,6 +32,11 @@ body {
     
     a {
         color: $linklight;
+        @include ease(transition($ease));
+
+        &:hover {
+            color: darken($linklight, 10%);
+        }
     }
 
     ul {
@@ -16,6 +45,23 @@ body {
     h1,h2,h3,h4,h5,h6 {
         color: $textlight;
     }
+    p.description {
+        color: $textlight;
+    }
+
+    code {
+        border-color: rgba(0,0,0,0.25);
+    }
+
+    .themeToggle {
+        input {
+            &:before {
+                content:'';
+                background-image: $lightIcon;
+            }
+        }
+    }
+
 }
 //end light mode
 
@@ -23,6 +69,8 @@ body {
 body.dark {
     background-color: $bgdark;
     color: $textdark;
+
+    
 
     a {
         color: $linkdark;
@@ -35,6 +83,23 @@ body.dark {
 
     h1,h2,h3,h4,h5,h6 {
         color: $textdark;
+    }
+
+    p.description {
+        color: $textdark;
+    }
+
+    code {
+        border-color: rgba(255,255,255,0.25);
+    }
+
+    .themeToggle {
+        input {
+            &:before {
+                content:'';
+                background-image: $darkIcon;
+            }
+        }
     }
 }
 //end dark mode
@@ -197,4 +262,5 @@ footer {
 code {
     display: inline-block;
     padding: .1rem .5rem;
+    border-left: 3px solid;
 }

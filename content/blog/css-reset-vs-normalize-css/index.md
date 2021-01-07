@@ -4,6 +4,8 @@ date: "2020-12-16"
 description: When starting a website or application build, it's best practice to bring in a "pre-built" stylesheet that will allow you to start building your own stylesheets without any interference from styling defaults across each browser. There's a difference between Normalize and Reset, so which choice is best for your case?
 ---
 
+<img src="dog-icon.png">
+
 ## What does CSS Reset/Normalize CSS do?
 
 [CSS Reset](http://meyerweb.com/eric/tools/css/reset/) and [Normalize CSS](https://necolas.github.io/normalize.css/) remove all of the default styling applied to [block elements](https://www.w3schools.com/htmL/html_blocks.asp) so there are no inconsistencies across browsers. You cannot go wrong using either, but let's dive deeper into each resource and identify the difference between the two.

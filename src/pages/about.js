@@ -8,6 +8,7 @@ const AboutPage = () => (
     
     <div className="aboutPage">
         <div className="johnAvatar">
+          <img src="dog-icon.png"></img>
         </div>
       <div>
         <h2>About John</h2>

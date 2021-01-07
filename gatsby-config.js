@@ -5,8 +5,8 @@ module.exports = {
       name: `John Durso`,
       summary: `Web designer and developer in Detroit, Michigan!`,
     },
-    description: `A blog with tips about web stuff and my journey as a developer.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    description: `Web design and development for small businesses, start-ups, e-commerce, and everything in-between!`,
+    siteUrl: `https://johndurso.co`,
     social: {
       twitter: `johndursodev`,
     },
@@ -62,19 +62,16 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `John's blog`,
+        name: `johndurso.co`,
         short_name: `johndurso`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/web-design-icon.png`,
       },
     },
     `gatsby-plugin-react-helmet`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
     `gatsby-plugin-dark-mode`,
   ],
 }

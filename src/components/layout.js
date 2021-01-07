@@ -37,16 +37,17 @@ const Layout = ({ location, title, children }) => {
           © {new Date().getFullYear()} developed by <Link className="exLink" href="https://twitter.com/johndursodev" target="_blank" rel="noreferrer">@johndursodev</Link>
         </p>
         <ThemeToggler>
-          {({ theme, toggleTheme }) => (
-            <label>
-              <input
-                type="checkbox"
-                onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
-                checked={theme === 'dark'}
-              />{' '}
-              Dark mode
-            </label>
-          )}
+            {({ theme, toggleTheme }) => (
+              <div className="themeToggle">
+                <label for="themeToggler">{' '}Dark mode</label>
+                <input
+                    type="checkbox"
+                    onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
+                    checked={theme === 'dark'}
+                    name="themeToggler"
+                  />
+              </div>
+            )}
         </ThemeToggler>
         <p className="attribution">Icons made by <a href="https://www.flaticon.com/free-icon/reading_3749934?related_item_id=3749948&term=read" title="monkik">monkik</a> from <a href="https://www.flaticon.com/" title="Flaticon"><img style={{width:`50px`, display: `inline-block`}} src="https://media.flaticon.com/dist/min/img/logo/flaticon_negative.svg"></img></a></p>
       </footer>
