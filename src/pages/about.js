@@ -7,9 +7,7 @@ const AboutPage = () => (
     <SEO title="About" keywords={[`web designer`, `web developer`, `user experience`, `user interface`]} />
     
     <div className="aboutPage">
-        <div className="johnAvatar">
-          <img src="dog-icon.png"></img>
-        </div>
+        <div className="johnAvatar"></div>
       <div>
         <h2>About John</h2>
         <p>I am a web designer and front-end web developer with experience in building large-scale and small boutique websites and applications. I spent the early part of my career with two different small agencies managing Wordpress sites, running social media campaigns, and building websites using HTML5, CSS3, and Javascript. Today, I'm involved in multiple different teams across <a target="_blank" rel="noreferrer" href="https://www.thomsonreuters.com/en.html">Thomson Reuters</a> handling website migrations, influencing design direction, and even had the pleasure of being apart of the small team that built the <a a href="_blank" rel="noreferrer" href="https://www.thomsonreuters.com/en/resources/covid-19.html">Thomson Reuters COVID-19 Resource Center</a>.</p>

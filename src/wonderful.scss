@@ -62,6 +62,10 @@ body {
         }
     }
 
+    #tsparticles {
+        display: none;
+    }
+
 }
 //end light mode
 
@@ -69,8 +73,6 @@ body {
 body.dark {
     background-color: $bgdark;
     color: $textdark;
-
-    
 
     a {
         color: $linkdark;
@@ -100,6 +102,10 @@ body.dark {
                 background-image: $darkIcon;
             }
         }
+    }
+
+    #tsparticles {
+        display: block;
     }
 }
 //end dark mode
@@ -263,4 +269,15 @@ code {
     display: inline-block;
     padding: .1rem .5rem;
     border-left: 3px solid;
+}
+
+//ParticlesJS
+
+#tsparticles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 3000px;
+    width: 3000px;
 }
